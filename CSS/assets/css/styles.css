@@ -1,167 +1,258 @@
 * {
   box-sizing: border-box;
 }
-
 html {
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  --padding-size: 0.5rem 1rem;
+  --main-white-color: white;
+  --main-black-color: black;
 }
 
 body {
-  background-color: #e7e7f1;
-  padding: 50px;
-  color: #717171;
+  color: var(--main-black-color);
+  background-color: var(--main-white-color);
   line-height: 1.5;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
 }
 
-.userCard {
-  background-color: #ffffff;
-  box-shadow: 0 0 10px #cbcbd3;
-  padding: 20px;
-  max-width: 320px;
-  min-width: 280px;
+/* nav */
+
+.main-nav {
+  display: flex;
+  padding: var(--padding-size);
+  box-shadow: 0 0 5px gray;
   width: 100%;
+  font-family: Verdana, sans-serif;
+  letter-spacing: 0.3em;
+  position: fixed;
+  z-index: 2;
+  background-color: var(--main-white-color);
+}
+
+.nav-item {
+  text-decoration: none;
+  color: inherit;
+  padding: var(--padding-size);
+}
+.nav-item:hover,
+.nav-link:hover {
+  background-color: #ccc;
+}
+
+.nav-bold-letter {
+  font-weight: bolder;
+}
+
+.nav-links3 {
   display: flex;
-  flex-direction: column;
+  margin-left: auto;
   align-items: center;
-  flex-basis: 300px;
 }
 
-.editBtn {
-  align-self: flex-end;
-  border: none;
-  background-color: inherit;
-  color: #d5d5d5;
+.nav-link {
+  padding: var(--padding-size);
+  text-decoration: none;
+  color: inherit;
 }
 
-.userImg {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-top: -5px;
-  position: static;
+/* header */
+
+.main-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.iconsMenu {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  color: white;
-  background-color: #36c483;
+.header-h1-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 50%;
+  color: var(--main-white-color);
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 0.3em;
+}
+
+.header-bold-letter {
+  font-weight: bolder;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: var(--padding-size);
+  text-align: center;
+}
+
+.header-img-architect {
+  max-width: 1500px;
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  padding: var(--padding-size);
+  margin: 0 1rem;
+}
+
+/* section-project */
+
+.section-project,
+.section-about,
+.section-contact,
+.img-map {
+  max-width: 1500px;
+  min-width: 135px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-sub-header-project,
+.section-sub-header-about,
+.section-sub-header-contact {
+  padding: 2rem 0;
+  margin: 1em 0;
+  font-size: 1.5rem;
+  border-bottom: lightgrey 2px solid;
+}
+
+.figure-project {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 3px 1px 1px #c0ebd8;
-  position: relative;
-  top: -40px;
-  left: 40px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1500px;
+  width: 100%;
 }
 
-h2 {
-  margin: 3px;
-  font-size: 2rem;
-  font-weight: bold;
+.img-figura {
+  max-width: 360px;
+}
+
+.img-project {
+  width: 100%;
+  flex-grow: 1;
+  position: relative;
+}
+
+.img-caption {
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
+  padding: var(--padding-size);
+  position: absolute;
+  z-index: 1;
+}
+
+/* section-about */
+
+.p-in-section-about,
+.p-in-section-contact {
+  margin: 1em 0;
+  padding: 0 0 2em;
+}
+
+.article-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.card-about {
+  max-width: 380px;
+  width: 100%;
+  flex-basis: 230px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-card {
+  width: 100%;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin: 1em 0;
 }
 
 .profession {
-  margin: 5px;
+  margin: 1em 0;
 }
-
-.data {
-  display: flex;
-  justify-content: space-between;
+.btn-contact {
+  background-color: #f1f1f1;
+  padding: var(--padding-size);
+  margin-top: 1em;
   text-align: center;
-  gap: 10px;
-  width: 100%;
-  margin: 20px;
+  text-decoration: none;
+  color: inherit;
+  margin-top: auto;
 }
 
-.data-amount {
-  font-weight: bold;
+.btn-contact:hover,
+.btn-send-message:hover {
+  background-color: #ccc;
 }
 
-.aboutUser {
-  text-align: center;
-  padding: 20px 0;
-}
+/* section-contact */
 
-.cardFooter {
+.input {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  margin-top: auto;
+  gap: 1em;
 }
 
-.social-links {
+.input-section {
+  padding: 8px;
+  border: 1px solid lightgray;
+}
+
+.input-section:link {
+  border: 1px solid var(--main-black-color);
+}
+
+.btn-send-message {
+  padding: var(--padding-size);
+  margin: 1em 0;
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
+}
+
+.btn-send-message:hover {
+  background-color: #ccc;
+  color: var(--main-black-color);
+  border: none;
+}
+
+.footer-info {
   display: flex;
-  gap: 10px;
-  margin-top: auto;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
 }
 
-.social-links-TW {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #58bbf8;
-  color: white;
-}
-
-.social-links-Fb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #45629e;
-  color: white;
-}
-
-.social-links-G {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fe8b75;
-  color: white;
-}
-
-.social-links-Be {
+.bg-link {
+  background-color: var(--main-black-color);
+  color: var(--main-white-color);
+  padding: 2em;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #377efe;
-  color: white;
+  width: 100%;
 }
 
-.link-profile {
-  border: 1px solid #717171;
-  text-decoration: none;
-  text-align: center;
-  padding: 5px 45px;
+.footer-link {
   color: inherit;
-  border-radius: 20px;
-  font-size: 1.5rem;
 }
 
-.link-profile:hover {
-  background-color: #2fb6bf;
-  color: white;
+.footer-link:hover {
+  color: greenyellow;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-links3 {
+    position: absolute;
+    right: 100%;
+  }
+
+  .header-small-letter {
+    display: none;
+  }
 }
