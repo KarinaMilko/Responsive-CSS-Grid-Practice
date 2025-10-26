@@ -10,6 +10,6 @@ Goal: Build a page using CSS Grid and implement responsiveness.
 Technologies: HTML, CSS (Grid, media queries)  
 Features: Layout adapts to screen width, using grid columns/rows and flex for internal blocks.
 
-**[Demo](https://karinamilko.github.io/Responsive-CSS-Grid-Project/)**  
+**[Demo](https://karinamilko.github.io/Responsive-CSS-Grid-Practice/)**  
 
 
